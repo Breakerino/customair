@@ -1,0 +1,29 @@
+.fr-container-gap,
+.container-gap {
+    row-gap: $contextual-container-gap;
+}
+.fr-content-gap,
+.content-gap {
+    row-gap: $contextual-content-gap;
+}
+.fr-grid-gap,
+.grid-gap {
+    gap: $contextual-grid-gap;
+}
+
+// Contextual Colors
+
+@if $option-contextual-color-classes == on {
+    @each $colorName, $colorSet in $contextualColors {
+        @each $colorName, $colorValue in $colorSet {
+            .text--#{$colorName} {
+                color: var(--#{$colorName});
+            }
+            .bg--#{$colorName} {
+                background-color: var(--#{$colorName});
+            }
+
+            // Links are generated in the links module.
+        }
+    }
+}

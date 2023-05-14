@@ -1,0 +1,32 @@
+@import '_16.scss'; 
+
+section.wa-section--certificates {
+	--section-offset-y: calc( var(--space-xl) * -1);
+    margin-bottom: var(--space-l);
+}
+
+.wa-certificates-grid {
+    --gap: var(--space-xs);
+    display: flex;
+    gap: var(--gap);
+    flex-flow: column nowrap;
+
+    @media (min-width: $breakpoint-min-md) {
+        --gap: var(--space-s);
+        flex-flow: row wrap;
+    }
+}
+
+.wa-certificate {
+    flex: 1 0 calc(50% - var(--gap));
+    padding: var(--space-xs);
+    border-radius: var(--radius-xs);
+    background: var(--white);
+    box-shadow: 0 0.5rem 0.5rem hsla(var(--secondary-h), var(--secondary-s), 75%, 15%);
+
+    img {
+        width: 100%;
+        height: auto;
+        user-select: none;
+    }
+}

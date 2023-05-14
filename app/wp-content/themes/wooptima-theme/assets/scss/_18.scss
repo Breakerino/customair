@@ -1,0 +1,7 @@
+:root {
+    --site-container-width: #{$site-container-width};
+    --site-container-gutter: var(--space-s);
+    
+    // Gradients
+    --primary-gradient: linear-gradient(270deg, var(--primary) -10%, hsl(var(--primary-dark-h), var(--primary-dark-s), 35%) 100%);
+}

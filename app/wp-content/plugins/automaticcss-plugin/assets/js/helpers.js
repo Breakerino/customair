@@ -1,0 +1,1 @@
+let waitForEl=r=>new Promise(t=>{if(document.querySelector(r))return t(document.querySelector(r));const o=new MutationObserver(e=>{document.querySelector(r)&&(t(document.querySelector(r)),o.disconnect())});o.observe(document.body,{childList:!0,subtree:!0})});export{waitForEl};

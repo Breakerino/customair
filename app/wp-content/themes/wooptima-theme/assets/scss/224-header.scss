@@ -1,0 +1,60 @@
+@import '_16.scss'; 
+
+section.wa-section--contact {
+	--section-offset-y: calc( var(--space-xl) * -1);
+}
+
+.wa-contact {
+	&-section.wa-section-container {
+		display: grid;
+		margin-bottom: var(--space-l); 
+		
+		@media (min-width: $breakpoint-min-lg) {
+			gap: var(--space-m);
+			grid-template-columns: 3fr 2fr;
+		}
+	}
+	
+	&-info {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: var(--space-s);
+		.wa-infobox {
+			--icon-size: 4rem; 
+			&-text {
+				display: flex;
+				flex-direction: column;
+				font-size: calc(var(--text-m)*0.9);
+				color: var(--white);
+			}
+		}
+	}
+
+	&-image {
+		&,
+		&__wrapper {
+			width: 100%;
+			height: 100%;
+		}
+
+		object-fit: cover;
+		object-position: center;
+	}
+
+
+	&-heading.wa-heading {
+		font-size: var(--text-xl);
+		font-weight: 700;
+		margin-top: calc(var(--space-xs) * 0.35);
+		
+		@media (min-width: $breakpoint-min-md) {
+			margin-top: 0;
+		}
+	}
+
+	&-subheading {
+		font-weight: 500;
+		font-size: var(--text-m);
+	}
+}

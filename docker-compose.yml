@@ -1,0 +1,47 @@
+services:
+  app:
+    container_name: ${PROJECT_NAME}_app_${PROJECT_ENV}
+    hostname: ${APP_HOST}
+    image: wordpress:latest
+    restart: unless-stopped
+    environment:
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_USER: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_NAME: ${DATABASE_NAME}
+    networks:
+      - main
+      - internal
+    volumes:
+      - ./app:/var/www/html:rw
+    depends_on:
+      - database
+
+  database:
+    image: mariadb:latest
+    container_name: ${PROJECT_NAME}_database_${PROJECT_ENV}
+    hostname: ${DATABASE_HOST}
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${DATABASE_USERNAME}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_TCP_PORT: ${DATABASE_PORT}
+    networks:
+      - internal
+    volumes:
+      - database:/var/lib/mysql
+      
+networks:
+  main:
+    external: true
+    name: breakerino_main
+  internal:
+    driver: bridge
+
+volumes:
+  database:
+    driver: local

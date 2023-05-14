@@ -1,0 +1,180 @@
+@import '_16.scss'; 
+@import '_13.scss'; 
+@import '_11.scss'; 
+@import '_18.scss'; 
+@import '_191.scss'; 
+
+/*
+ * ------------------------------------------------
+ * CSS | Global
+ * ------------------------------------------------
+ */
+
+/*
+ * ------------------------------------------------
+ * Resets, gutters
+ * ------------------------------------------------
+ */
+body section.brxe-section,
+body header.brxe-section,
+body .wa-header-topbar__wrapper.brxe-section, 
+body footer.brxe-section {
+	padding-left: var(--site-container-gutter);
+	padding-right: var(--site-container-gutter);
+}
+
+html {
+	overflow-x: auto;
+}
+
+body {
+	min-width: 320px;
+}
+
+/*
+ * ------------------------------------------------
+ * Headings
+ * ------------------------------------------------
+ */
+.wa-heading {
+	--font-size: calc(var(--text-xl) * 1.15);
+	--indicator-width: 7rem;
+	--indicator-height: 0.75rem;
+	--indicator-spacing: 1.15rem;
+	
+	position: relative;
+	padding-bottom: calc(var(--indicator-height) + var(--indicator-spacing));
+	font-size: var(--font-size);
+	font-weight: 700;
+	line-height: 1.25;
+
+	&--light {
+		color: var(--white);
+	}
+	
+	@media (min-width: $breakpoint-min-lg) {
+		line-height: 1.15;
+		--font-size: calc(var(--text-xl) * 1.25);
+	}
+
+	@media (min-width: $site-container-width) {
+		--font-size: calc(var(--text-xl) * 1.45);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background: var(--primary);
+		width: var(--indicator-width);
+		border-radius: var(--radius-m);
+		height: var(--indicator-height);
+	}
+}
+
+
+/*
+ * ------------------------------------------------
+ * Text
+ * ------------------------------------------------
+ */
+.wa-text--dot {
+	&::after {
+		content: '.';
+		font-size: inherit;
+		color: var(--primary);
+	}
+}
+
+/*
+ * ------------------------------------------------
+ * Button
+ * ------------------------------------------------
+ */
+.wa-button {
+	font-size: var(--text-m) !important;
+	padding: calc(var(--space-xs) * 0.55) !important;
+
+	font-weight: 500;
+	font-family: Lato, 'Open Sans', sans-serif;
+
+	&:hover {
+		box-shadow: 0 0.25rem 1.25rem var(--primary-trans-20);
+	}
+
+	// Variants
+	&--primary {
+		background: var(--primary-gradient);
+		background-size: 125%;
+		background-position: 0% center;
+		color: var(--white);
+
+		&:hover {
+			background-position: 75% center;
+		}
+	}
+
+	&--secondary {
+		border-color: var(--primary);
+		color: var(--primary);
+
+		&:hover {
+			background: var(--primary) !important;
+			color: var(--white) !important;
+		}
+	}
+
+	// Sizes
+	&--s {
+		font-size: calc(var(--text-s) * 1.325) !important;
+		padding: calc(var(--space-s) * 0.35) calc(var(--space-s) * 0.75) !important;
+	}
+
+	&--m {
+		font-size: var(--text-m) !important;
+		padding: calc(var(--space-m) * 0.35) calc(var(--space-m) * 0.75) !important;
+	}
+
+	&--l {
+		font-size: var(--text-l) !important;
+		padding: calc(var(--space-l) * 0.35) calc(var(--space-l) * 0.75) !important;
+	}
+}
+
+.wa-gradient--primary {
+	background: var(--primary-gradient);
+}
+
+/*
+ * ------------------------------------------------
+ * Infobox
+ * ------------------------------------------------
+ */
+.wa-infobox {
+	--icon-size: 3.5rem;
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-xs);
+	width: fit-content;
+	
+	@media (min-width: $breakpoint-min-sm) {
+		--icon-size: 4.5rem;
+		flex-flow: row nowrap;
+	}
+	
+	&-content {
+		display: flex;
+		flex-direction: column;
+	}
+	&-icon {
+		width: var(--icon-size);
+		height: var(--icon-size);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--primary-gradient);
+		border-radius: var(--radius-m);
+		padding: calc(var(--space-xs)*0.75);
+	}	
+}

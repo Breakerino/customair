@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>/</loc>
+		<lastmod>2023-05-14T20:23:00+00:00</lastmod>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/04/img-homepage-section-about.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/04/img-homepage-section-heat-pump-dotations.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/05/img-homepage-section-recuperation-dotations.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/04/service-icon-1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/04/service-icon-2.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/04/service-icon-3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/04/service-icon-4.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/04/service-icon-5.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/04/service-icon-6.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>/osvedcenia/</loc>
+		<lastmod>2023-06-01T19:57:15+00:00</lastmod>
+	</url>
+	<url>
+		<loc>/kontakt/</loc>
+		<lastmod>2023-05-14T20:54:37+00:00</lastmod>
+		<image:image>
+			<image:loc>/wp-content/uploads/2023/05/img-contact-page.jpg</image:loc>
+		</image:image>
+	</url>
+</urlset>
+<!-- This sitemap was originally generated in 0,055 second(s). (Memory usage: 230,23 KB) - 36 queries -->

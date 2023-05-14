@@ -1,0 +1,42 @@
+// Deprecated in v2.5
+
+@if $option-breakouts == on {
+  @include breakpoint-up(xl) {
+    @each $breakout, $breakoutValue in $breakouts {
+      $breakoutMath: vw($breakoutValue / 2);
+
+      .breakout--#{$breakout} {
+        inline-size: vw($breakoutValue);
+        max-inline-size: vw($breakoutValue) !important;
+        margin-inline: calc(-#{$breakoutMath} + 50%);
+      }
+      .brxe-image.breakout--#{$breakout} {
+        inline-size: vw($breakoutValue);
+        margin-inline: calc(-#{$breakoutMath} + 50%);
+      }
+    }
+  }
+  .breakout--full {
+    inline-size: 100vw !important;
+    max-inline-size: 100vw !important;
+    margin-inline: calc(-50vw + 50%) !important;
+    align-self: flex-start;
+  }
+  .brxe-image.breakout--full {
+    inline-size: 100vw !important;
+    max-inline-size: 100vw !important;
+    margin-inline: calc(-50vw + 50%) !important;
+    align-self: flex-start;
+  }
+  // .breakout--left {
+  //   margin-left: calc(-50vw + 50%);
+  //   margin-right: auto;
+  // }
+  @include breakpoint(xl) {
+    [class*="breakout--"]:not(.breakout--full) {
+      inline-size: 100% !important;
+      max-inline-size: 100% !important;
+      margin-inline: 0;
+    }
+  }
+}

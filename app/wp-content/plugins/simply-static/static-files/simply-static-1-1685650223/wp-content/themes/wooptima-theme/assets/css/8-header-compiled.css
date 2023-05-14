@@ -1,0 +1,152 @@
+/* 
+ * ---------------------------------------------
+ * Variables > General
+ * --------------------------------------------- 
+ */
+/* 
+ * ---------------------------------------------
+ * Variables > Breakpoints
+ * ---------------------------------------------
+ */
+@media (max-width: 991px) {
+  .wa-section {
+    padding-top: calc(var(--section-padding-x) * 2);
+    padding-bottom: calc(var(--section-padding-x) * 2);
+  }
+}
+@media (max-width: 767px) {
+  .wa-section {
+    padding-top: calc(var(--section-padding-x) * 1.75);
+    padding-bottom: calc(var(--section-padding-x) * 1.75);
+  }
+}
+/*
+ * ------------------------------------------------
+ * Section | Hero
+ * ------------------------------------------------
+ */
+.wa-section--hero {
+  --height: 60rem;
+  --padding-y: var(--space-l);
+  --content-offset: 0;
+  height: var(--height);
+  min-height: 50vh;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: var(--padding-y);
+  padding-bottom: var(--padding-y);
+}
+.wa-section--hero::before {
+  content: '';
+  background: var(--secondary-trans-40);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+@media (min-width: 992px) {
+  .wa-section--hero {
+    background-size: contain;
+    --content-offset: 25rem;
+    --padding-y: var(--space-xl);
+  }
+  .wa-section--hero::before {
+    content: unset;
+  }
+}
+.wa-hero-heading {
+  display: inline-block;
+  font-size: calc(var(--text-xl) * 1.75);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  .wa-hero-heading {
+    font-size: calc(var(--text-xl) * 2);
+  }
+}
+.wa-hero-content {
+  z-index: 1;
+}
+.wa-hero-text {
+  padding-right: var(--content-offset);
+}
+/*
+ * ------------------------------------------------
+ * Section | About
+ * ------------------------------------------------
+ */
+@media (min-width: 1366px) {
+  .wa-section--about .wa-section-image {
+    --image-width: clamp(100rem, 100vw, 200rem);
+  }
+}
+@media (min-width: 992px) {
+  .wa-section--about .wa-section-container {
+    padding-left: var(--section-offset);
+  }
+}
+/*
+ * ------------------------------------------------
+ * Section | Heat pump
+ * ------------------------------------------------
+ */
+@media (min-width: 991px) {
+  .wa-section--heat-pump {
+    margin-left: calc(var(--section-offset) * -1);
+    border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  }
+}
+@media (min-width: 1366px) {
+  .wa-section--heat-pump {
+    --section-offset: 150px !important;
+  }
+  .wa-section--heat-pump .wa-section-image {
+    --image-width: clamp(100rem, 100vw, 175rem);
+  }
+}
+.wa-section--heat-pump .wa-section-container {
+  padding-left: var(--section-offset);
+}
+/*
+ * ------------------------------------------------
+ * Section | Services
+ * ------------------------------------------------
+ */
+.wa-services-list {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .wa-services-list {
+    grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr));
+  }
+}
+.wa-service-card {
+  --card-padding: calc(var(--space-l)*0.75);
+  padding: var(--card-padding);
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .wa-service-card {
+    --card-padding: calc(var(--space-l)*0.85);
+  }
+}
+.wa-service-card__icon {
+  width: auto;
+  height: 4rem;
+}
+.wa-service-card__heading {
+  font-size: calc(var(--text-l)*0.9);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.wa-service-card__text {
+  font-size: calc(var(--text-m)*0.95);
+}
+/*# sourceMappingURL=8-partials.map */

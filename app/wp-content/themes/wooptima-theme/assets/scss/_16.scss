@@ -1,0 +1,32 @@
+/* 
+ * ---------------------------------------------
+ * Variables > General
+ * --------------------------------------------- 
+ */
+$site-container-width: 1366px;
+
+/* 
+ * ---------------------------------------------
+ * Variables > Breakpoints
+ * ---------------------------------------------
+ */
+
+// @media (min-width)
+$breakpoint-min-xl: $site-container-width;
+$breakpoint-min-lg: 992px;
+$breakpoint-min-md: 768px;
+$breakpoint-min-sm: 480px;
+$breakpoint-min-xs: 375px;
+
+// @media (max-width)
+$breakpoint-max-xl: $breakpoint-min-xl - 1px;
+$breakpoint-max-lg: $breakpoint-min-lg - 1px;
+$breakpoint-max-md: $breakpoint-min-md - 1px;
+$breakpoint-max-sm: $breakpoint-min-sm - 1px;
+$breakpoint-max-xs: $breakpoint-min-xs - 1px;
+
+
+
+
+
+

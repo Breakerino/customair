@@ -1,0 +1,38 @@
+/*
+ * ------------------------------------------------
+ * Footer
+ * ------------------------------------------------
+ */
+.wa-footer {
+    color: var(--white);
+    &-container {
+        flex-direction: column;
+        column-gap: var(--space-m);
+        row-gap: var(--space-m);
+
+        @media (min-width: $breakpoint-min-md) {
+            flex-direction: row;
+            
+            & > div:not(:first-child) {
+                margin-left: auto;
+            }
+        }
+    }
+    &-copyright {
+        color: var(--white);
+        line-height: 1.325;
+    }
+    a {
+        color: var(--white);
+        &:hover {
+            color: var(--white);
+        }
+    }
+    &-menu {
+    }
+    .wa-contact-info {
+        .wa-infobox {
+            align-items: center;
+        }
+    }
+}

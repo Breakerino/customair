@@ -1,0 +1,28 @@
+$marginDirections: (
+      "top": block-start, 
+      "bottom": block-end, 
+      "right": inline-start, 
+      "left": inline-start
+      );
+
+@if $option-margin == on {
+  @each $marginDirection, $marginProperty in $marginDirections {
+    @each $size, $extension in $sizeExtensions {
+      .margin-#{$marginDirection}--#{$extension},
+      .brxe-image.margin-#{$marginDirection}--#{$extension} {
+        margin-#{$marginProperty}: map-get(
+          map-get($spacing, pure),
+          space-#{$extension}-pure
+        );
+        margin-#{$marginProperty}: map-get(
+          map-get($spacing, calc),
+          space-#{$extension}-calc
+        );
+        margin-#{$marginProperty}: map-get(
+          map-get($spacing, clamp),
+          space-#{$extension}-clamp
+        );
+      }
+    }
+  }
+}
