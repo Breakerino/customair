@@ -22,13 +22,22 @@
         color: var(--white);
         line-height: 1.325;
     }
+    &-created-by-text {
+        a {
+            color: var(--white) !important;
+            &:hover {
+                text-decoration: underline;
+            }
+            span {
+                color: #4EACFF;
+            } 
+        }
+    }
     a {
         color: var(--white);
         &:hover {
             color: var(--white);
         }
-    }
-    &-menu {
     }
     .wa-contact-info {
         .wa-infobox {

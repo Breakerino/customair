@@ -33,6 +33,15 @@
   color: var(--white);
   line-height: 1.325;
 }
+.wa-footer-created-by-text a {
+  color: var(--white) !important;
+}
+.wa-footer-created-by-text a:hover {
+  text-decoration: underline;
+}
+.wa-footer-created-by-text a span {
+  color: #4EACFF;
+}
 .wa-footer a {
   color: var(--white);
 }
